@@ -4,19 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AR Business Card</title>
-    <!-- Add AR.js and A-Frame libraries -->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
   </head>
   <body style="margin: 0; overflow: hidden;">
-    <!-- Create AR Scene -->
     <a-scene embedded arjs>
-      <!-- Define your AR marker -->
-      <a-marker preset="hiro">
-        <!-- Add 3D model or content to display on scan -->
-        <a-box position="0 0.5 0" material="color: red;"></a-box>
+      <!-- Custom Marker with a PNG image -->
+      <a-marker type="pattern" url="image/pattern-12-removebg-preview.patt">
+        <a-box position="0 0.5 0" material="color: blue"></a-box>
+        <a-text value="Hello! I am your Digital Business Card" position="0 1 0" scale="2 2 2" color="black"></a-text>
       </a-marker>
-
       <a-entity camera></a-entity>
     </a-scene>
   </body>
