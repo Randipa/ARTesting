@@ -9,8 +9,9 @@
   <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
     <!-- Marker for tracking -->
     <a-marker type="pattern" url="pattern-hiro.patt">
-      <!-- Plane to display the image -->
-      <a-plane id="imagePlane" position="0 0 0" rotation="-90 0 0" width="1" height="1" material="shader: flat; scale: 2 2 2; src:—Pngtree—man avatar image for profile_13001882.png"></a-plane>
+      <!-- Plane to display the image with animation -->
+      <a-plane id="imagePlane" position="0 0 0" rotation="-90 0 0" width="1" height="1" material="shader: flat; src: —Pngtree—man avatar image for profile_13001882.png" 
+               animation="property: scale; to: 2 2 2; dur: 1000; easing: easeOutElastic; loop: false"></a-plane>
     </a-marker>
     <!-- Camera to view the scene -->
     <a-entity camera></a-entity>
