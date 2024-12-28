@@ -22,19 +22,32 @@
               font="https://cdn.aframe.io/fonts/mozillavr.fnt" 
               width="4">
       </a-text>
+
+      <!-- Contact Text -->
       <a-text value="Contact: +123456789" 
-              position="0 -1.5 1.5" 
+              position="0 -1.5 1.6" 
               scale="2 2 2" 
               rotation="-90 0 0" 
-              color="black" 
+              color="blue" 
               align="center" 
               font="https://cdn.aframe.io/fonts/mozillavr.fnt" 
-              width="4">
+              width="4"
+              id="contact-text"
+              clickable>
       </a-text>
     </a-marker>
 
     <!-- Camera to view the scene -->
-    <a-entity camera></a-entity>
+    <a-entity camera cursor="fuse: true; fuseTimeout: 500"></a-entity>
+
   </a-scene>
+
+  <script>
+    // Add an event listener to the contact text
+    document.querySelector('#contact-text').addEventListener('click', function () {
+      // Open the phone dialer with the phone number
+      window.location.href = 'tel:+123456789';  // Replace with the desired phone number
+    });
+  </script>
 </body>
 </html>
